@@ -1,0 +1,147 @@
+:root {
+    --monitor-bg: #1a1a1a;
+    --waveform-grid: #2a2a2a;
+    --ecg-color: #00ff00;
+    --spo2-color: #00ffff;
+    --capno-color: #ffff00;
+    --text-color: #ffffff;
+    --button-red: #ff4444;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: "Arial", sans-serif;
+    color: var(--text-color);
+  }
+  
+  .container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .monitor {
+    background-color: var(--monitor-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vital-signs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .monitor-section {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .parameter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .waveform-canvas {
+    width: 100%;
+    height: 150px;
+    background-color: var(--waveform-grid);
+    border-radius: 5px;
+  }
+  
+  .side-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .control-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .control-btn.aed {
+    background-color: var(--button-red);
+    color: white;
+  }
+  
+  .control-btn.analyse {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .control-btn.defib {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .control-btn.nibp {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .config-panel {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .config-panel.hidden {
+    display: none;
+  }
+  
+  .config-section {
+    margin-bottom: 20px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+  }
+  
+  .heart-icon {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  

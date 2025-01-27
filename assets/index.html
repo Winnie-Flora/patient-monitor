@@ -70,6 +70,9 @@
                 <select id="ecg-select" onchange="updateWaveform('ecg')">
                     <!-- Options will be populated by JavaScript -->
                 </select>
+                <h4>ECG Speed</h4>
+                <input type="range" id="ecg-speed" min="0.5" max="2" step="0.1" value="1" onchange="updateECGSpeed(this.value)">
+                <span id="ecg-speed-value">1x</span>
             </div>
             <div class="config-section">
                 <h3>SpO2 Waveform</h3>
